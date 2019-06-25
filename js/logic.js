@@ -3,4 +3,4 @@ ReactDOM.render(
     document.getElementById("root")
 );
 
-console.log("hekk");
+console.log("motty loves shnitzel");
