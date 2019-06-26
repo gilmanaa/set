@@ -165,16 +165,8 @@ class Shape extends React.Component {
         var shape = hello.shape;
         console.log(shape)
         return (
-<<<<<<< HEAD
             <div className={shape}>
             </div>
-=======
-             <div className="shape">
-                 <div className="circle empty red "></div>
-                 <div className="square lined blue "></div> 
-                 <div className="triangle full green"></div>
-             </div>
->>>>>>> 2683593379d48131aded773f2eeb33a3ec765dc4
         );
     }
 }
