@@ -18,9 +18,11 @@ class Board extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            isSet: false,
+            cardsSelected: 0
         }
     }
+
     render() {
         let numbers = [1, 2, 3];
         let filling = ['full', 'empty', 'lined'];
@@ -147,6 +149,8 @@ class Card extends React.Component {
         this.setState({
             isSelected: !this.state.isSelected
         })
+        // this.props.cardSelect(e.target)
+        console.log(e.target);
     }
 
     render() {
