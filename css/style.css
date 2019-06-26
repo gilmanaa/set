@@ -87,3 +87,8 @@ body {
 .green {
   background-color: green;
 }
+
+
+.selected {
+  border: 5px purple solid;
+}
