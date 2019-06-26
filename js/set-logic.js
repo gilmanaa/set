@@ -56,24 +56,29 @@ set.checkMyCards = (cards) => {
             }
         }
     }
+    mySelected = [];
 }
 
 
-document.querySelector('.selected').addEventListener( "click", (e) => {
-    mySelected.push(e.target);
-    if(mySelected.length >= 2){
-        set.checkMyCards(mySelected);
-    }
-})
+// document.querySelector('.selected').addEventListener( "click", (e) => {
+//     mySelected.push(e.target);
+//     if(mySelected.length >= 2){
+//         set.checkMyCards(mySelected);
+//     }
+// })
 
 let setBoard = []
+
+
+
 set.newSet = (myDeck) => {
-    for(let i = myDeck.length; i< 12; i--){
-        setBoard.push(myDeck[i]);
+    for(let x = myDeck.length; x> myDeck.length-12; x--){
+        setBoard.push(myDeck[x]);
     }
     return setBoard;
 }
 
+console.log(set.newSet(myDeck))
 
 
 
