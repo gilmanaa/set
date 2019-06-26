@@ -1,94 +1,147 @@
 body {
-    padding: 0;
-    margin: 0;
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: lightcyan;
 }
 
 .container {
-    border: 5px solid black;
-    height: 100vh;
-    width: 100vw;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
+  padding: 30px;
+margin-top: 20px;
+
+   
 }
 
 .board {
-    display: inline-block;
-    border: 1px solid black;
-    padding: 10px;
-    width: 1200px;
+  
+  display: inline-block;
+  /* border: 1px solid black; */
 }
 
 .row {
-    height: 300px;
-    display: block;
-    border: 1px solid black;
+  display: inline-block;
+  display: flex;
+  /* border: 1px solid black; */
+  padding: 10px;
 }
 
 .card {
-    background-color: whitesmoke;
-    margin: 20px;
-    display: inline-block;
-    border: 1px solid black;
-    height: 200px;
-    width: 200px;
-    transition: transform 1s;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
+  margin: 20px;
+  display: inline-block;
+  border: 1px solid black;
+  height: 130px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  transition: transform 1s;
+  box-shadow: 5px 10px;
 }
 
 /* set */
-.card:hover {
-    transform: scale(1.2);
-
-}
+/* .card:hover {
+   
+} */
 
 .triangle {
-    width: 30;
-    height: 100;
-
-    margin: 10px;
-    float: left;
+  width: 30;
+  height: 80px;
+  margin-top: 30px;
+  margin-left: 10px;
+  float: left;
 }
 
 .square {
-    width: 100px;
-    height: 50px;
-    transform: skew(30deg);
-    background-color: aliceblue;
-    margin: 10px;
-    float: left;
+  border-radius: 5px 30px 5px;
+  height: 70px;
+  width: 50px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 
 .circle {
-    display: block;
+  display: block;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  height: 60px;
+  width: 40px;
 
-
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    height: 80px;
-    width: 50px;
-    float: left;
-    margin: 10px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 
-.empty {
-    border: 1px dashed;
+.full.blue {
+  border: 1px solid black;
 }
-
-.lined {
-    border: 1px dotted;
+.lined.blue {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 5px,
+    blue 5px,
+    blue 10px
+  );
 }
-
-.full {
-    border: 1px solid;
+.lined.green {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 5px,
+    green 5px,
+    green 10px
+  );
+}
+.lined.red {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 5px,
+    red 5px,
+    red 10px
+  );
 }
 
 .red {
-    border-color: red;
+  background-color: red;
 }
 
 .blue {
-    border-color: blue;
+  background-color: blue;
 }
 
 .green {
-    border-color: green;
+  background-color: green;
 }
+.empty.red {
+  border: 3px solid red;
+  background-color: white;
+}
+.empty.blue {
+  border: 3px solid blue;
+  background-color: white;
+}
+
+.empty.green {
+  border: 3px solid green;
+  background-color: white;
+}
+
+.selected {
+  border: 5px purple solid;
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+
+/* waiting for daniel */
+/* .set{
+    opacity: 0.5;
+} */
+
+

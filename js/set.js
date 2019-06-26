@@ -18,9 +18,11 @@ class Board extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            isSet: false,
+            cardsSelected: 0
         }
     }
+
     render() {
         let numbers = [1, 2, 3];
         let filling = ['full', 'empty', 'lined'];
@@ -138,14 +140,30 @@ class Card extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            isSelected: false
         }
+        this.selectCard = this.selectCard.bind(this);
     }
+
+    selectCard(e) {
+        this.setState({
+            isSelected: !this.state.isSelected
+        })
+        // this.props.cardSelect(e.target)
+        console.log(e.target);
+    }
+
     render() {
         var myProps = this.props.cardObj;
+        var numberShapes = myProps.number;
+        var myArr = []
+        for (var i = 0; i < numberShapes; i++) {
+            myArr.push(<Shape key={i} objProps={myProps} />)
+        }
+        var selected = this.state.isSelected ? "selected" : "";
         return (
-            <div className="card">
-                <Shape objProps={myProps} />
+            <div className={`card ${selected}`} onClick={this.selectCard}>
+                {myArr}
             </div>
         );
     }
@@ -160,21 +178,13 @@ class Shape extends React.Component {
     }
 
     render() {
-        console.log(this.props.objProps)
         var hello = this.props.objProps;
         var shape = hello.shape;
-        console.log(shape)
+        var color = hello.color;
+        var filling = hello.filling;
         return (
-<<<<<<< HEAD
-            <div className={shape}>
+            <div className={shape + " " + color + " " + filling}>
             </div>
-=======
-             <div className="shape">
-                 <div className="circle empty red "></div>
-                 <div className="square lined blue "></div> 
-                 <div className="triangle full green"></div>
-             </div>
->>>>>>> 2683593379d48131aded773f2eeb33a3ec765dc4
         );
     }
 }
