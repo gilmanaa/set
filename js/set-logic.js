@@ -75,8 +75,3 @@ set.newSet = (myDeck) => {
     }
     return setBoard;
 }
-set.newSet(myDeck);
-console.log(setBoard)
-
-console.log(set.checkMyCards(setBoard));
-
