@@ -1,94 +1,90 @@
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-    border: 5px solid black;
-    height: 100vh;
-    width: 100vw;
-    padding: 30px;
-    display: flex;
-    justify-content: center;
+  border: 5px solid black;
+  height: 100vh;
+  width: 100vw;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .board {
-    display: inline-block;
-    border: 1px solid black;
-    padding: 10px;
-    width: 1200px;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 10px;
+  width: 1200px;
 }
 
 .row {
-    height: 300px;
-    display: block;
-    border: 1px solid black;
+  height: 300px;
+  display: block;
+  border: 1px solid black;
 }
 
 .card {
-    background-color: whitesmoke;
-    margin: 20px;
-    display: inline-block;
-    border: 1px solid black;
-    height: 200px;
-    width: 200px;
-    transition: transform 1s;
+  background-color: whitesmoke;
+  margin: 20px;
+  display: inline-block;
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  transition: transform 1s;
 }
 
 /* set */
 .card:hover {
-    transform: scale(1.2);
-
+  transform: scale(1.2);
 }
 
 .triangle {
-    width: 30;
-    height: 100;
-
-    margin: 10px;
-    float: left;
+  width: 30;
+  height: 100
+  margin: 10px;
+  float: left;
 }
 
 .square {
-    width: 100px;
-    height: 50px;
-    transform: skew(30deg);
-    background-color: aliceblue;
-    margin: 10px;
-    float: left;
+  width: 100px;
+  height: 50px;
+  transform: skew(30deg);
+  background-color: aliceblue;
+  margin: 10px;
+  float: left;
 }
 
 .circle {
-    display: block;
-
-
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    height: 80px;
-    width: 50px;
-    float: left;
-    margin: 10px;
+  display: block;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  height: 80px;
+  width: 50px;
+  float: left;
+  margin: 10px;
 }
 
 .empty {
-    border: 1px dashed;
+  border: 1px dashed;
 }
 
 .lined {
-    border: 1px dotted;
+  border: 1px dotted;
 }
 
 .full {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 .red {
-    border-color: red;
+  background-color: red;
 }
 
 .blue {
-    border-color: blue;
+  background-color: blue;
 }
 
 .green {
-    border-color: green;
+  background-color: green;
 }
