@@ -47,12 +47,11 @@ body {
 }
 
 .square {
-  width: 100px;
-  height: 50px;
-  transform: skew(30deg);
-  background-color: aliceblue;
-  margin: 10px;
-  float: left;
+    width: 100px;
+    height: 50px;
+    transform: skew(30deg);
+    margin: 10px;
+    float: left;
 }
 
 .circle {
