@@ -1,68 +1,75 @@
 body {
-   padding: 0;
-   margin: 0;
+  padding: 0;
+  margin: 0;
 }
-.container{
-
-    border: 5px solid black;
-    height: 100vh;
-    width: 100hw;
-    padding: 30px;
+.container {
+  border: 5px solid black;
+  height: 100vh;
+  width: 100hw;
+  padding: 30px;
 }
 
-.board{
+.board {
   display: inline-block;
-    border: 1px solid black;
-    padding: 10px;
-    width: 1200px;
-     
+  border: 1px solid black;
+  padding: 10px;
+  width: 1200px;
 }
 
-.row{
-    height: 300px;
-    display: block;
-    border: 1px solid black;
+.row {
+  height: 300px;
+  display: block;
+  border: 1px solid black;
 }
 
-
- 
-
-
-.circle{
-    border: 1px dashed red;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    float: left;
-    margin: 10px;
-    
+.circle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 10px;
 }
 
-.square{
-    border: 1px dashed green;
-    height: 50px;
-    width: 50px;
-    float: left;
-    margin: 10px;
-    
+.square {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 10px;
 }
 
-.oval{
-    border: 1px dashed blue;
-    border-radius: 25%;
-    height: 50px;
-    width: 50px;
-    float: left;
-    margin: 10px;
-    
+.oval {
+  border-radius: 25%;
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 10px;
 }
 
-
- 
-.card{
-    margin: 20px;
-    display: inline-block;
-    border: 1px solid black;
-    height: 200px;
-    width: 200px;
+.dashed {
+  border: 1px dashed;
 }
+.dotted {
+  border: 1px dotted;
+}
+.solid {
+  border: 1px solid;
+}
+
+.card {
+  margin: 20px;
+  display: inline-block;
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+}
+.red {
+  border-color: red;
+}
+.blue {
+  border-color: blue;
+}
+
+.green {
+  border-color: green;
+}
+
