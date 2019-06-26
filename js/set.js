@@ -21,9 +21,24 @@ class Board extends React.Component {
             isSet: false,
             cardsSelected: 0
         }
+        this.countCards = this.countCards.bind(this)
+        this.validateSelected = this.validateSelected.bind(this)
+    }
+    countCards() {
+        this.setState({
+            cardsSelected: this.state.cardsSelected + 1
+        })
+    }
+
+    validateSelected(){
+        var selectorCount = document.getElementsByClassName('selected');
+        if(selectorCount.length === 3) {
+            //run set test
+        }
     }
 
     render() {
+        console.log(this.state.cardsSelected);
         let numbers = [1, 2, 3];
         let filling = ['full', 'empty', 'lined'];
         let color = ['red', 'blue', 'green'];
@@ -108,9 +123,9 @@ class Board extends React.Component {
         var row3 = firstSet.slice(8, 12)
         return (
             <div className="board">
-                <CardRow arrRow={row1} />
-                <CardRow arrRow={row2} />
-                <CardRow arrRow={row3} />
+                <CardRow cardCount={this.countCards} arrRow={row1} />
+                <CardRow cardCount={this.countCards} arrRow={row2} />
+                <CardRow cardCount={this.countCards} arrRow={row3} />
             </div>
         );
     }
@@ -122,15 +137,19 @@ class CardRow extends React.Component {
         this.state = {
 
         }
+        this.cardCount = this.cardCount.bind(this)
+    }
+    cardCount() {
+        this.props.cardCount();
     }
     render() {
         var row = this.props.arrRow
         return (
             <div className="row">
-                <Card cardObj={row[0]} />
-                <Card cardObj={row[1]} />
-                <Card cardObj={row[2]} />
-                <Card cardObj={row[3]} />
+                <Card cardCount={this.cardCount} cardObj={row[0]} />
+                <Card cardCount={this.cardCount} cardObj={row[1]} />
+                <Card cardCount={this.cardCount} cardObj={row[2]} />
+                <Card cardCount={this.cardCount} cardObj={row[3]} />
             </div>
         );
     }
@@ -149,8 +168,7 @@ class Card extends React.Component {
         this.setState({
             isSelected: !this.state.isSelected
         })
-        // this.props.cardSelect(e.target)
-        console.log(e.target);
+        this.props.cardCount();
     }
 
     render() {
