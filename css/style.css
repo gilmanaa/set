@@ -1,4 +1,7 @@
 body {
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -7,12 +10,13 @@ body {
 
 .container {
   padding: 30px;
+margin-top: 20px;
+
    
-  background-color: lightcyan;
 }
 
 .board {
-  background-color: darkcyan;
+  
   display: inline-block;
   /* border: 1px solid black; */
 }
@@ -25,8 +29,8 @@ body {
 }
 
 .card {
-    box-sizing: border-box;
-    border-radius: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
   background-color: white;
   margin: 20px;
   display: inline-block;
@@ -36,12 +40,13 @@ body {
   display: flex;
   justify-content: center;
   transition: transform 1s;
+  box-shadow: 5px 10px;
 }
 
 /* set */
-.card:hover {
-  transform: scale(1.2);
-}
+/* .card:hover {
+   
+} */
 
 .triangle {
   width: 30;
@@ -56,8 +61,8 @@ body {
   height: 70px;
   width: 50px;
   float: left;
-   margin-top: 30px;
-   margin-left: 10px;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 
 .circle {
@@ -65,10 +70,10 @@ body {
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   height: 60px;
   width: 40px;
-   
+
   float: left;
-   margin-top: 30px;
-   margin-left: 10px;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 
 .full.blue {
@@ -127,7 +132,16 @@ body {
   background-color: white;
 }
 
-
 .selected {
   border: 5px purple solid;
+  transform: scale(1.2);
+  opacity: 0.5;
 }
+
+
+/* waiting for daniel */
+/* .set{
+    opacity: 0.5;
+} */
+
+
