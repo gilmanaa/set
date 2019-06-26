@@ -77,9 +77,3 @@ set.newSet = (myDeck) => {
     }
     return setBoard;
 }
-
-console.log(set.newSet(myDeck))
-
-
-
-console.log(firstSet)
