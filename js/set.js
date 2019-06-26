@@ -78,7 +78,8 @@ class Shape extends React.Component {
         return (
              <div className="shape">
                  <div className="circle"></div>
-                 <div className="square"></div> <div className="oval"></div>
+                 <div className="square dashed"></div> 
+                 <div className="oval"></div>
              </div>
         );
     }
