@@ -20,7 +20,6 @@ for(let i = 0; i< numbers.length; i++){
     }
 }
 
-
 set.shuffleCards = (myDeck) => {
     
         let j, x, i;
@@ -40,22 +39,35 @@ console.log(myDeck)
 
 let mySelected = [];
 
+
+
+set.counter = 0;
 set.checkMyCards = (cards) => {
-    let counter = 0;
-    for(let i = 0; i< cards.length; i++){
-        for(let x = 0; x< cards.length; x++){
-            for(let y = 0; y< cards.length; y++){ 
-                if((cards[i].color == cards[x].color || cards[i].color == cards[y].color) || (cards[i].number == cards[x].number || cards[i].number == cards[y].number) || (cards[i].filling == cards[x].filling || cards[i].filling == cards[y].filling) || (cards[i].shape == cards[x].shape || cards[i].shape == cards[y].shape)) {
-                    console.log("bad")
-                }else {
-                    counter++;
-                }
+   
+            if(cards[0]['number'] == cards[1]['number'] && cards[0]['number'] == cards[2]['number'] ){
+               set.counter++;
+                
             }
+            if(cards[0]['fill'] == cards[1]['fill']  && cards[0]['fill'] == cards[2]['fill'] ){
+                set.counter++;
+            }
+
+
+            if(cards[0]['color'] == cards[1]['color'] && cards[0]['color'] == cards[2]['color'] ){
+                set.counter++;
+            }
+
+            if(cards[0]['shape'] == cards[1]['shape'] && cards[0]['shape'] == cards[2]['shape'] ){
+                set.counter++;
+            }
+
+        if(set.counter === 3 || set.counter == 1){
+            console.log("Great");
+        }else {
+            console.log("Set");
         }
     }
-    return counter;
-   
-}
+
 
 
 // document.querySelector('.selected').addEventListener( "click", (e) => {
@@ -67,8 +79,6 @@ set.checkMyCards = (cards) => {
 
 let setBoard = []
 
-
-
 set.newSet = (myDeck) => {
     for(let x = myDeck.length-1; x> myDeck.length-13; x--){
         setBoard.push(myDeck[x]);
@@ -76,7 +86,13 @@ set.newSet = (myDeck) => {
     return setBoard;
 }
 set.newSet(myDeck);
-console.log(setBoard)
 
-console.log(set.checkMyCards(setBoard));
+
+let checkCards = [
+    {number: 1, fill: "empty", color: "green", shape: "circle"},
+    {number: 1, fill: "lined", color: "green", shape: "circle"},
+    {number: 1, fill: "full", color: "green", shape: "circle"}
+]
+
+console.log(set.checkMyCards(checkCards));
 
