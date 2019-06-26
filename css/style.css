@@ -7,7 +7,7 @@ body {
 
 .container {
   padding: 30px;
-  width: 100hw;
+   
   background-color: lightcyan;
 }
 
@@ -18,7 +18,8 @@ body {
 }
 
 .row {
-  display: block;
+  display: inline-block;
+  display: flex;
   /* border: 1px solid black; */
   padding: 10px;
 }
@@ -30,8 +31,10 @@ body {
   margin: 20px;
   display: inline-block;
   border: 1px solid black;
-  height: 200px;
-  width: 200px;
+  height: 130px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
   transition: transform 1s;
 }
 
@@ -43,7 +46,8 @@ body {
 .triangle {
   width: 30;
   height: 80px;
-  margin: 15px;
+  margin-top: 30px;
+  margin-left: 10px;
   float: left;
 }
 
@@ -52,7 +56,8 @@ body {
   height: 70px;
   width: 50px;
   float: left;
-  margin: 15px;
+   margin-top: 30px;
+   margin-left: 10px;
 }
 
 .circle {
@@ -62,7 +67,8 @@ body {
   width: 40px;
    
   float: left;
-  margin: 15px;
+   margin-top: 30px;
+   margin-left: 10px;
 }
 
 .full.blue {
