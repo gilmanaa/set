@@ -22,23 +22,24 @@ class Board extends React.Component {
             cardsSelected: 0
         }
         this.countCards = this.countCards.bind(this)
-        this.validateSelected = this.validateSelected.bind(this)
+        // this.validateSelected = this.validateSelected.bind(this)
     }
+
     countCards() {
         this.setState({
             cardsSelected: this.state.cardsSelected + 1
         })
+        // this.validateSelected(e.target)
     }
 
-    validateSelected(){
-        var selectorCount = document.getElementsByClassName('selected');
-        if(selectorCount.length === 3) {
-            //run set test
-        }
-    }
+    // validateSelected(){
+    //     var selectorCount = document.getElementsByClassName('selected');
+    //     if(selectorCount.length === 3) {
+    //         set.checkMyCards(checkCards)
+    //     }
+    // }
 
     render() {
-        console.log(this.state.cardsSelected);
         let numbers = [1, 2, 3];
         let filling = ['full', 'empty', 'lined'];
         let color = ['red', 'blue', 'green'];
@@ -164,7 +165,7 @@ class Card extends React.Component {
         this.selectCard = this.selectCard.bind(this);
     }
 
-    selectCard(e) {
+    selectCard() {
         this.setState({
             isSelected: !this.state.isSelected
         })
