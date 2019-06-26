@@ -138,9 +138,17 @@ class Card extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            isSelected: false
         }
+        this.selectCard = this.selectCard.bind(this);
     }
+
+    selectCard(e) {
+        this.setState({
+            isSelected: !this.state.isSelected
+        })
+    }
+
     render() {
         var myProps = this.props.cardObj;
         var numberShapes = myProps.number;
@@ -148,8 +156,9 @@ class Card extends React.Component {
         for (var i = 0; i < numberShapes; i++) {
             myArr.push(<Shape key={i} objProps={myProps} />)
         }
+        var selected = this.state.isSelected ? "selected" : "";
         return (
-            <div className="card">
+            <div className={`card ${selected}`} onClick={this.selectCard}>
                 {myArr}
             </div>
         );
