@@ -2,32 +2,30 @@ body {
    padding: 0;
    margin: 0;
 }
+.container{
 
-.container {
+    border: 5px solid black;
     height: 100vh;
-    width: 100vw;
+    width: 100hw;
+    padding: 30px;
 }
 
-.board {
-    height: 120vh;
-    width: 80vw;
-}
-
-.row {
-    width: 70vw;
-    height: 20vh;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.card{
+.board{
+  display: inline-block;
     border: 1px solid black;
-    height: 150px;
-    width: 150px;
-    margin: 10px;
- 
+    padding: 10px;
+    width: 1200px;
+     
 }
+
+.row{
+    height: 300px;
+    display: block;
+    border: 1px solid black;
+}
+
+
+ 
 
 
 .circle{
@@ -61,3 +59,10 @@ body {
 
 
  
+.card{
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
