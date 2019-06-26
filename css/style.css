@@ -4,9 +4,11 @@ body {
 }
 .container {
   border: 5px solid black;
-  height: 100vh;
+  height: 90vh;
   width: 100hw;
   padding: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .board {
@@ -22,46 +24,58 @@ body {
   border: 1px solid black;
 }
 
-.circle {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  float: left;
-  margin: 10px;
-}
-
-.square {
-  height: 50px;
-  width: 50px;
-  float: left;
-  margin: 10px;
-}
-
-.oval {
-  border-radius: 25%;
-  height: 50px;
-  width: 50px;
-  float: left;
-  margin: 10px;
-}
-
-.dashed {
-  border: 1px dashed;
-}
-.dotted {
-  border: 1px dotted;
-}
-.solid {
-  border: 1px solid;
-}
-
 .card {
+  background-color: whitesmoke;
   margin: 20px;
   display: inline-block;
   border: 1px solid black;
   height: 200px;
   width: 200px;
+  transition: transform 1s;
 }
+/* set */
+.card:hover {
+  transform: scale(1.2);
+  
+}
+.triangle {
+    width: 30;
+	height: 100;
+	 
+    margin: 10px;
+    float: left;
+}
+
+.square {
+    width: 100px;
+    height: 50px;
+    transform: skew(30deg);
+   
+  margin: 10px;
+  float: left;
+}
+
+.circle {
+  display: block;
+
+   
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  height: 80px;
+  width: 50px;
+  float: left;
+  margin: 10px;
+}
+
+.empty {
+  border: 1px dashed;
+}
+.lined {
+  border: 1px dotted;
+}
+.full {
+  border: 1px solid;
+}
+
 .red {
   border-color: red;
 }
@@ -72,4 +86,3 @@ body {
 .green {
   border-color: green;
 }
-

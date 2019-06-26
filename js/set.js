@@ -77,9 +77,9 @@ class Shape extends React.Component {
     render() {
         return (
              <div className="shape">
-                 <div className="circle dotted red "></div>
-                 <div className="square dashed blue "></div> 
-                 <div className="oval solid green"></div>
+                 <div className="circle empty red "></div>
+                 <div className="square lined blue "></div> 
+                 <div className="triangle full green"></div>
              </div>
         );
     }
