@@ -41,22 +41,20 @@ console.log(myDeck)
 let mySelected = [];
 
 set.checkMyCards = (cards) => {
+    let counter = 0;
     for(let i = 0; i< cards.length; i++){
         for(let x = 0; x< cards.length; x++){
-            for(let y = 0; y< cards.length; y++){
-                if((cards[i].color == cards[x].color || cards[i].color == cards[y].color || cards[i].color == cards[y].color) || (cards[i].number == cards[x].number || cards[i].number == cards[y].number || cards[i].number == cards[y].number) || (cards[i].filling == cards[x].filling || cards[i].filling == cards[y].filling || cards[i].filling == cards[y].filling) || (cards[i].shape == cards[x].shape || cards[i].shape == cards[y].shape || cards[i].shape == cards[y].shape)) 
-                    for(let index = 0; index < mySelected.length; index++){
-                        mySelected[index].classList.add("notSet")
+            for(let y = 0; y< cards.length; y++){ 
+                if((cards[i].color == cards[x].color || cards[i].color == cards[y].color) || (cards[i].number == cards[x].number || cards[i].number == cards[y].number) || (cards[i].filling == cards[x].filling || cards[i].filling == cards[y].filling) || (cards[i].shape == cards[x].shape || cards[i].shape == cards[y].shape)) {
+                    console.log("bad")
                 }else {
-                    for(let index = 0; index < mySelected.length; index++){
-                        mySelected[index].classList.add("set");
-                    }
-                 
+                    counter++;
                 }
             }
         }
     }
-    mySelected = [];
+    return counter;
+   
 }
 
 
@@ -72,7 +70,7 @@ let setBoard = []
 
 
 set.newSet = (myDeck) => {
-    for(let x = myDeck.length; x> myDeck.length-12; x--){
+    for(let x = myDeck.length-1; x> myDeck.length-13; x--){
         setBoard.push(myDeck[x]);
     }
     return setBoard;
