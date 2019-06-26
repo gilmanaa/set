@@ -61,7 +61,7 @@ class Card extends React.Component {
     render() {
         return (
              <div className="card">
-                 <Shape />
+                 <Shape thisShape={this.receiveRandom}/>
              </div>
         );
     }
@@ -77,7 +77,7 @@ class Shape extends React.Component {
     render() {
         return (
              <div className="shape">
-                 <span>Hello</span>
+                 <span></span>
              </div>
         );
     }
