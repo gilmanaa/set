@@ -39,14 +39,6 @@
 let myDeck = [];
 
 
-  //let obj = new Deck(2, "ds", "dasda", "das");
-  let newObject = {number: 2,
-fill: "dsada",
-color: "dsasd",
-shape: "dsaasd"};
-  console.log(newObject)
-
-
   let numbers =[1, 2, 3];
   let filling = ['full', 'empty', 'lined'];
   let color =['red', 'blue', 'green'];
