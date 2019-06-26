@@ -146,7 +146,7 @@ class Card extends React.Component {
         var numberShapes = myProps.number;
         var myArr = []
         for (var i = 0; i < numberShapes; i++) {
-            myArr.push(<Shape objProps={myProps} />)
+            myArr.push(<Shape key={i} objProps={myProps} />)
         }
         return (
             <div className="card">
