@@ -22,8 +22,9 @@ margin-top: 20px;
 }
 
 .row {
-  display: inline-block;
+   
   display: flex;
+  align-content: center;
   /* border: 1px solid black; */
   padding: 10px;
 }
@@ -133,15 +134,17 @@ margin-top: 20px;
 }
 
 .selected {
-  border: 5px purple solid;
-  transform: scale(1.2);
-  opacity: 0.5;
+  border: 5px rgb(233, 39, 39) solid;
+  transform: scale(1.15);
+  
 }
 
 
 /* waiting for daniel */
 /* .set{
+     border: 5px green solid;
     opacity: 0.5;
+     transform: scale(1.15);
 } */
 
 
