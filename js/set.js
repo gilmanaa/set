@@ -143,9 +143,14 @@ class Card extends React.Component {
     }
     render() {
         var myProps = this.props.cardObj;
+        var numberShapes = myProps.number;
+        var myArr = []
+        for (var i = 0; i < numberShapes; i++) {
+            myArr.push(<Shape objProps={myProps} />)
+        }
         return (
             <div className="card">
-                <Shape objProps={myProps} />
+                {myArr}
             </div>
         );
     }
@@ -160,12 +165,12 @@ class Shape extends React.Component {
     }
 
     render() {
-        console.log(this.props.objProps)
         var hello = this.props.objProps;
         var shape = hello.shape;
-        console.log(shape)
+        var color = hello.color;
+        var filling = hello.filling;
         return (
-            <div className={shape}>
+            <div className={shape + " " + color + " " + filling}>
             </div>
         );
     }
